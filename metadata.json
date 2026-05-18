@@ -1,0 +1,13 @@
+{
+  "name": "DR圈 - 每日共创",
+  "description": "融合 BeReal 真实触发与话题共创的社交平台，记录每个人的真实瞬间。",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "social",
+    "realtime",
+    "health"
+  ]
+}

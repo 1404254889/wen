@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-gold: #d6b27e;
+  --color-dark: #050506;
+  --color-card: #18191c;
+  --color-soft: #242428;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans antialiased;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+.mask-gradient {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.glass-pill {
+  @apply bg-white/10 backdrop-blur-md border border-white/10;
+}
+
+.bento-card {
+  @apply bg-card rounded-[32px] overflow-hidden shadow-2xl;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

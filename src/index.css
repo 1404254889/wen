@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-gold: #d6b27e;
+  --color-dark: #000000;
+  --color-background: #000000;
+  --color-card: #111111;
+  --color-soft: #1a1a1a;
+  --color-gold-muted: #b89156;
+  --color-red-primary: #ff2442;
+
+  --animate-bounce-subtle: bounce-subtle 3s ease-in-out infinite;
+
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white font-sans antialiased;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+.mask-gradient {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.glass-pill {
+  @apply bg-white/10 backdrop-blur-xl border border-white/10 shadow-sm;
+}
+
+.bento-card {
+  @apply bg-card rounded-[32px] overflow-hidden shadow-2xl border border-white/5;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
